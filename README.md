@@ -30,8 +30,9 @@ width="400">
 The package can be installed from [Bioconductor](https://bioconductor.org/packages/devel/bioc/html/ddPCRclust.html) (recommended).
 ```R
 ## try http:// if https:// URLs are not supported
-source("https://bioconductor.org/biocLite.R")
-biocLite("ddPCRclust")
+if (!requireNamespace("BiocManager", quietly=TRUE))
+    install.packages("BiocManager")
+BiocManager::install("ddPCRclust")
 ```
 
 Alternatively, you can also install this package like any other package from GitHub using devtools or by downloading the archive.   
